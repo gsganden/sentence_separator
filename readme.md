@@ -1,5 +1,5 @@
-This Python script puts each sentence of a text document on a separate line, which is helpful for tracking changes with Git and other version-control systems. It is primarily intended for use with LaTeX documents, where the extra line breaks will not affect the final output.
+This Python script puts each sentence of a text document on a separate line, which is helpful for tracking changes with Git and other version-control systems.
 
-It prompts you for the filepath of the document you would like to change, reprompting as long as the file is not found. It then asks for the desired output filepath, reprompting once if the output and input filepaths are the same (which is not recommended). Finally, it copies the text from the input file into the output file, with the appropriate newline characters inserted.
+It takes a path to an input file and a desired output path as command-line arguments.
 
-It is a bit susceptible to false positives, e.g. separating on "et al." in the middle of a sentence. However, it is not fooled by "i.e.," "e.g.," ellipses, decimal numbers, or upper-case initials. I would be surprised if it is not also susceptible to false negatives, but I have not seen any yet.
+The results may not be perfect, but the script does handle some edge cases such as "i.e.," "e.g.," ellipses, decimal numbers, and upper-case initials.
